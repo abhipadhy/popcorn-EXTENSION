@@ -1,3 +1,35 @@
+document.onreadystatechange = function() { 
+    if (document.readyState !== "complete") { 
+        document.querySelector( 
+          "body").style.visibility = "hidden"; 
+        document.querySelector( 
+          "#loader").style.visibility = "visible"; 
+          document.querySelector( 
+            ".llogo").style.visibility = "visible"; 
+          document.querySelector( 
+            "h3").style.visibility = "visible"; 
+            document.querySelector( 
+                "#auth").style.visibility = "visible"; 
+          
+    } else { 
+        setTimeout(() => {
+            console.log('waiting');
+            document.querySelector( 
+                "#loader").style.display = "none"; 
+                document.querySelector( 
+                    "h3").style.display="none"; 
+                    document.querySelector( 
+                        ".llogo").style.display = "none";    
+                        document.querySelector( 
+                            "#auth").style.display = "none";        
+                   
+              document.querySelector( 
+                "body").style.visibility = "visible";
+        }, 2000);
+        
+    } 
+}; 
+
 function key (){
     fetch('https://popcornapi2.herokuapp.com/getkey')
     .then(response => response.json())
@@ -49,7 +81,7 @@ function trending(data){
         }
         document.getElementById('content').innerHTML=innerdata;
         for(let i=0;i<=10;i++){
-            document.getElementById(`c${i}`).style.backgroundImage= `linear-gradient(180deg, rgba(10, 10, 10, 0) 13.99%, #0A0A0A 100%),url('https://image.tmdb.org/t/p/original${data.results[i].poster_path}')`;
+            document.getElementById(`c${i}`).style.backgroundImage= `linear-gradient(180deg, rgba(10, 10, 10, 0) 63.99%, #0A0A0A 100%),url('https://image.tmdb.org/t/p/original${data.results[i].poster_path}')`;
         }
         
     })

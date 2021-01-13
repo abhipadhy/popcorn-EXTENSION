@@ -15,6 +15,39 @@ body,html{
     /* cursor: none; */
 }
 
+#loader { 
+    border: 10px solid #f3f3f3; 
+    border-radius: 50%; 
+    border-top: 10px solid #b6362d; 
+    width: 40px; 
+    height: 40px; 
+    animation: spin 2s linear infinite; 
+} 
+
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #bebaba;
+    letter-spacing: 5px;
+    font-weight:300;
+    margin:65% 5%;
+}
+  
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+} 
+  
+.center { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+} 
+
 
 .nav{
     height:10%;
@@ -24,7 +57,14 @@ body,html{
     background-size: cover;
     background-position: 50% 50%;
 }
-
+.llogo{
+    background:url(./assets/logo.png);
+    width: 70%;
+    height: 20%;
+    margin: 10% 15%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
 .logo{
     background:url(./assets/logo.png);
     position: relative;
@@ -33,6 +73,24 @@ body,html{
     height: 60%;
     background-size: cover;
     background-position: 50% 50%;
+}
+
+#auth{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0% ;
+    color: #00A8E1;
+    animation: viewauth 1s ease-in-out;
+}
+
+@keyframes viewauth{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .card{
