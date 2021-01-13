@@ -1,6 +1,6 @@
 function trending(){
 
-    fetch('https://api.themoviedb.org/3/trending/all/week?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb')
+    fetch('https://api.themoviedb.org/3/trending/all/week?api_key=')
     .then(response => response.json())
     .then(function(data){
         for(i=0;i<10;i++){
